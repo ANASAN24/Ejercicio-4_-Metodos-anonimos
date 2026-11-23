@@ -21,8 +21,6 @@ namespace ejercicio1
 
             Console.WriteLine(num1 + " * " + num2 + " = " + delegado(num1, num2));
             Console.WriteLine(num3 + " * " + num4 + " = " + delegado(num3, num4));
-
-            Console.ReadKey();
         }
     }
 }
