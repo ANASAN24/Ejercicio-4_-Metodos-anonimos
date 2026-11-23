@@ -8,8 +8,10 @@ namespace ejercicio3
 
         static void Main(string[] args)
         {
-            double temperatura1 = 0;
-            double temperatura2 = 30;
+            Console.Write("Introduce el primer número para convertir la temperatura: ");
+            double temperatura1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Introduce el segundo número para convertir la temperatura: ");
+            double temperatura2 = Convert.ToDouble(Console.ReadLine());
 
             ConvertirTemperatura delegado = delegate (double celsius)
             {
@@ -18,8 +20,6 @@ namespace ejercicio3
 
             Console.WriteLine(temperatura1 + "ºC -> " + delegado(temperatura1) + "ºF");
             Console.WriteLine(temperatura2 + "ºC -> " + delegado(temperatura2) + "ºF");
-
-            Console.ReadKey();
         }
     }
 }

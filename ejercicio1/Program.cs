@@ -8,11 +8,10 @@ namespace ejercicio1
 
         static void Main(string[] args)
         {
-            int num1 = 4;
-            int num2 = 3;
-
-            int num3 = 7;
-            int num4 = 5;
+            Console.Write("Introduce el primer número para multiplicar: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Introduce el segundo número para multiplicar: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
 
             Multiplicar delegado = delegate (int x, int y)
             {
@@ -20,7 +19,6 @@ namespace ejercicio1
             };
 
             Console.WriteLine(num1 + " * " + num2 + " = " + delegado(num1, num2));
-            Console.WriteLine(num3 + " * " + num4 + " = " + delegado(num3, num4));
         }
     }
 }

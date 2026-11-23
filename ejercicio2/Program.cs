@@ -8,8 +8,10 @@ namespace ejercicio2
 
         static void Main(string[] args)
         {
-            string palabra1 = "radar";
-            string palabra2 = "puerta";
+            Console.Write("Introduce la primera palabra para ver si es un palíndromo: ");
+            string palabra1 = Console.ReadLine();
+            Console.Write("Introduce la segunda palabra para ver si es un palíndromo: ");
+            string palabra2 = Console.ReadLine();
 
             VerificarPalindromo delegado = delegate (string palabra)
             {
