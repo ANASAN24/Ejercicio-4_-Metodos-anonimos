@@ -8,10 +8,10 @@ namespace ejercicio2
 
         static void Main(string[] args)
         {
-            Console.Write("Introduce la primera palabra para ver si es un palíndromo: ");
+            Console.Write("Introduce una palabra para saber si es un palíndromo: ");
             string palabra1 = Console.ReadLine();
-            Console.Write("Introduce la segunda palabra para ver si es un palíndromo: ");
-            string palabra2 = Console.ReadLine();
+            string palabra2 = "radar";
+            string palabra3 = "puerta";
 
             VerificarPalindromo delegado = delegate (string palabra)
             {
@@ -26,7 +26,9 @@ namespace ejercicio2
             };
 
             Console.WriteLine("'" + palabra1 + "' es un palíndromo: " + delegado(palabra1));
+            Console.WriteLine("Ejemplos: ");
             Console.WriteLine("'" + palabra2 + "' es un palíndromo: " + delegado(palabra2));
+            Console.WriteLine("'" + palabra3 + "' es un palíndromo: " + delegado(palabra3));
         }
     }
 }

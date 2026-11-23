@@ -8,10 +8,10 @@ namespace ejercicio3
 
         static void Main(string[] args)
         {
-            Console.Write("Introduce el primer número para convertir la temperatura: ");
+            Console.Write("Introduce una temperatura para convertir de Celcius a Fahrenheit: ");
             double temperatura1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Introduce el segundo número para convertir la temperatura: ");
-            double temperatura2 = Convert.ToDouble(Console.ReadLine());
+            double temperatura2 = 0;
+            double temperatura3 = 30;
 
             ConvertirTemperatura delegado = delegate (double celsius)
             {
@@ -19,7 +19,9 @@ namespace ejercicio3
             };
 
             Console.WriteLine(temperatura1 + "ºC -> " + delegado(temperatura1) + "ºF");
+            Console.WriteLine("Ejemplos: ");
             Console.WriteLine(temperatura2 + "ºC -> " + delegado(temperatura2) + "ºF");
+            Console.WriteLine(temperatura3 + "ºC -> " + delegado(temperatura3) + "ºF");
         }
     }
 }
